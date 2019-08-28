@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  text-align: top;
+}
+
+a:link {
+  background-color: #240872;
+  color: white;
+  padding: 14px;
+  margin-bottom: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:visited {
+  background-color: #240872;
+  color: white;
+  padding: 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+}
+a:hover,
+a:active {
+  background-color: rgb(138, 132, 221);
+}
+
+img {
+  width: 800px;
+  float: left;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+#lever {
+  font-size: 5px;
+}
+
+#article {
+  width: 800px;
+  float: bottom;
+}
+
+#list {
+  float: left;
+  margin-left: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p {
+  color: black;
+  font-family: "Arial";
+  font-size: 120%;
+  text-indent: 50px;
+  line-height: 1.5;
+  padding: 0px 5px;
+}
+
+h1 {
+  float: left;
+  text-align: center;
+  font-size: 43px;
+}
+
+ h2 {
+  color: black;
+  font-family: "Arial";
+  font-size: 150%;
+  font-weight: bold;
+  margin: 20px;
+  text-transform: uppercase;
+}
+h2:before {
+  counter-increment: section;
+  content: counter(section) ". " ;
+}
