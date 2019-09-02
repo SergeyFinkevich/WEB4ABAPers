@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    width: 100%;
+}
+
+#first {
+    float: left;
+    width: 49.5%;
+    margin-right: 0.5%;
+    height: 100px;
+    background-color: chocolate;
+}
+
+#second {
+    float: left;
+    width: 49.5%;
+    height: 100px;
+    margin-left: 0.5%;
+    top: 8px;
+    left: 50%;
+    background-color: chocolate;
+}
+
+#third {
+    float: left;
+    background-color: khaki;
+    height: 300px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Container for flexboxes */
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    flex: 1;
+    height: 150px; 
+    background-color: dodgerblue;
+}
+
+.column1 {
+    margin-right: 8px;
+}
+.column2 {
+    margin: 0 8px 0 8px;
+}
+.column3 {
+    margin-left: 8px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 16px;
+    margin-top: 8px;
+  }
+  
+  .grid-container > div {
+    background-color:lavender;
+    height: 120px;
+  }

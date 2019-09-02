@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  text-indent: 0;
+}
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(255, 255, 255);
+}
+
+/* mouse over link */
+.menu li:hover {
+  background-color: indigo;
+}
+
+/* selected link */
+a:active {
+  color: mediumslateblue;
+}
+
+.header {
+  position: absolute;
+  background-color: #0080FF;
+  color: #ffffff;
+  padding-top: 35px;
+  width: 90%;
+  height: 15%;
+  margin: 0 5%;
+  border-radius: 0 0 50px 50px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.menu ul {
+  position: fixed;
+  list-style-type: none;
+  padding: 30px;
+  top: 160px;
+  margin: 2% 5%;
+  height: 600px;
+  width: 15%;
+  background-color: rgba(49, 182, 182, 0.2);
+}
+
+.menu li {
+  padding: 15px 50px 15px 50px;
+  margin-bottom: 20px;
+  background-color: #78259e;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-indent: 0;
+}
+
+#content {
+  position: relative;
+  top: 170px;
+  left: 25%;
+  width: 60%;
+  text-indent: 6%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.footer {
+  position: fixed;
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 40px;
+  padding: 15px;
+  width: 90%;
+  height: 15%;
+  margin: 2% 5%;
+  bottom: 8px;
+  border-radius: 40px 40px 0 0;
+}
+
+#teams {
+  margin: 0;
+}
