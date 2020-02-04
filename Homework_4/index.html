@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Homework_4</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+  <div>
+    <h1 class="header">JSC "LevBankX" Group</h1>
+  </div>
+  <p id="error_messages_on_main" class="messages_on_main"></p>
+  <p id="nameAccountOwner"></p>
+  <p id="annualProfit"></p>
+  <dev id="acc_form">
+    <form id="form_login">
+      <label for="firstName">First name</label>
+      <input class="fields" type="text" id="firstName" required>
+      <label for="lastName">Last name</label>
+      <input class="fields" type="text" id="lastName" required>
+      <label for="RefRate">Refinancing rate</label>
+      <input class="fields" type="number" id="RefRate" required><br>
+      <input type="button" value="Create account" id="create_curr">
+    </form>
+  </dev>
+
+  <div class="menu">
+    <input type="button" id="curr" value="Current Account"><br>
+    <input type="button" id="save" value="Savings Account">
+    <p id="currencyFromJSON"></p>
+    <p id="curr_show"></p>
+    <p id="currency_error_message"></p>
+    <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+      <fieldset>
+        <h2>Upload exchange rates</h2>
+        <input type='file' id='fileinput'><br><br>
+        <input type="button" id="submit" value="Load">
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="right_menu">
+    <input type="button" id="IB" class="right_panel_btn" value="Internet Bancking">
+    <input type="button" id="dep" class="right_panel_btn" value="Deposits">
+    <input type="button" id="cred" class="right_panel_btn" value="Credits">
+  </div>
+  <div class="footer">
+    <p>Have any questions? Just drop us a line.
+      <a href="https://leverx.com/" id="button_contact">Contact</a>
+    </p>
+  </div>
+</body>
+
+<script type="text/javascript" src="CurrAccount.json"></script>
+<script src='main.js'></script>
+<script src='load_change_rates.js'></script>
+<script src='Accounts_definition.js'></script>
+<script src='Accounts_handling.js'></script>
+
+</html>

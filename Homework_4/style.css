@@ -1,0 +1,253 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+a:link {
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/* visited link */
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+/* mouse over link */
+a:hover {
+    background-color: white;
+    color: Navy;
+}
+
+/* selected link */
+a:active {
+    color: mediumslateblue;
+}
+
+.header {
+    position: fixed;
+    background-color: Navy;
+    color: #ffffff;
+    padding-top: 35px;
+    width: 87%;
+    height: 15%;
+    margin: 0 5%;
+    border-radius: 0 70px 0 70px;
+    text-align: center;
+    font-size: 50px;
+}
+
+body {
+    background: white url("./images/screen.jpg") no-repeat fixed right;
+    background-position: 640px;
+    background-size: 60%;
+}
+
+.footer {
+    position: fixed;
+    background-color: DeepSkyBlue;
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    padding: 15px;
+    width: 87%;
+    height: 15%;
+    margin: 0% 5%;
+    bottom: 2px;
+    border-radius: 70px 70px 0px 0;
+    text-align: right;
+}
+
+.menu {
+    position: fixed;
+    list-style-type: none;
+    padding: 30px;
+    top: 150px;
+    margin: 1% 5%;
+    height: 680px;
+    width: 34%;
+    background-color: rgba(49, 182, 182, 0.2);
+    border-radius: 50px 0 50px 0;
+}
+
+#curr,
+#save {
+    background-color: #78259e;
+    border: 4px solid yellow;
+    outline: none;
+    /* border: none; */
+    color: white;
+    padding: 15px 90px;
+    text-align: center;
+    margin-top: 7px;
+    border-radius: 10px;
+    font-family: Tahoma;
+    font-size: 100%;
+}
+
+#curr:hover,
+#save:hover,
+#create_curr:hover {
+    background-color: indigo;
+    cursor: pointer;
+}
+
+#right_menu {
+    position: absolute;
+    right: 0px;
+    width: 136px;
+    height: 99%;
+    background-color: Aquamarine;
+    z-index: 1;
+    border-radius: 70px 0 0 70px;
+    border: 4px double black;
+
+}
+
+.right_panel_btn {
+    position: fixed;
+    background-color: #78259e;
+    padding: 15px 30px;
+    right: 10px;
+    color: white;
+    font-family: Tahoma;
+    font-size: 100%;
+    /* border: 0; */
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid yellow;
+    outline: none;
+}
+
+.right_panel_btn:hover {
+    background-color: indigo;
+}
+
+#IB {
+    top: 200px;
+    width: 11em;
+}
+
+#dep {
+    top: 270px;
+    width: 11em;
+}
+
+#cred {
+    top: 340px;
+    width: 11em;
+}
+
+#fileinput {
+    width: 15em;
+}
+
+#submit {
+    width: 6.5em;
+}
+
+#button_contact {
+    border: 2px solid white;
+    padding: 15px 70px;
+    font-size: 80%;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    /* vertical-align: top; */
+}
+
+#currency_error_message {
+    position: fixed;
+    top: 620px;
+    left: 130px;
+    /* text-decoration: underline; */
+}
+
+
+td {
+    width: 95px;
+    height: 30px;
+}
+
+th {
+    text-align: left;
+}
+
+#jsonFile {
+    position: fixed;
+    top: 650px;
+    left: 120px;
+    width: 294px;
+    overflow: visible;
+    overflow: auto;
+    bottom: 0px;
+    margin: 20px 10px;
+}
+
+
+#form_login {
+    position: absolute;
+    display: none;
+    top: 230px;
+    left: 750px;
+    width: 45%;
+    height: 30px;
+    padding: .375rem .75rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    /* border: 1px solid #ced4da; */
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+}
+
+#firstName,
+#lastName {
+    width: 30%;
+    margin: 10px;
+}
+
+#create_curr {
+    background-color: #78259e;
+    border: none;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: Tahoma;
+    outline: none;
+    /* font-size: 100%; */
+}
+
+#error_messages_on_main {
+    position: fixed;
+    top: 170px;
+    left: 762px;
+}
+
+#nameAccountOwner {
+    position: fixed;
+    top: 180px;
+    left: 750px;
+}
+
+#annualProfit {
+    position: fixed;
+    top: 200px;
+    left: 750px;
+}

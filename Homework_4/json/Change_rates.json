@@ -1,0 +1,33 @@
+{
+	"Excange_Rates": [{
+			"currency": "USD",
+			"Buy": "2.1090",
+			"Sell": "2.1220"
+		},
+		{
+			"currency": "EUR",
+			"Buy": "2.3180",
+			"Sell": "2.3410"
+		},
+		{
+			"currency": "100 RUB",
+			"Buy": "3.3500",
+			"Sell": "3.4270"
+		},
+		{
+			"currency": "10 PLN",
+			"Buy": "5.0500",
+			"Sell": "5.6500"
+		},
+		{
+			"currency": "GBP",
+			"Buy": "2.6000",
+			"Sell": "2.8000"
+		},
+		{
+			"currency": "CHF",
+			"Buy": "2.0000",
+			"Sell": "2.2000"
+		}
+	]
+}
