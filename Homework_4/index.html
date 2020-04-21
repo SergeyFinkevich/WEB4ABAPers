@@ -1,65 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Homework_4</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Ibanking</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
-  <div>
-    <h1 class="header">JSC "LevBankX" Group</h1>
-  </div>
-  <p id="error_messages_on_main" class="messages_on_main"></p>
-  <p id="nameAccountOwner"></p>
-  <p id="annualProfit"></p>
-  <dev id="acc_form">
-    <form id="form_login">
-      <label for="firstName">First name</label>
-      <input class="fields" type="text" id="firstName" required>
-      <label for="lastName">Last name</label>
-      <input class="fields" type="text" id="lastName" required>
-      <label for="RefRate">Refinancing rate</label>
-      <input class="fields" type="number" id="RefRate" required><br>
-      <input type="button" value="Create account" id="create_curr">
-    </form>
-  </dev>
+    <div class="header">
+        <h2>JSC "LevBankX" Group</h2>
+    </div>
 
-  <div class="menu">
-    <input type="button" id="curr" value="Current Account"><br>
-    <input type="button" id="save" value="Savings Account">
-    <p id="currencyFromJSON"></p>
-    <p id="curr_show"></p>
-    <p id="currency_error_message"></p>
-    <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
-      <fieldset>
-        <h2>Upload exchange rates</h2>
-        <input type='file' id='fileinput'><br><br>
-        <input type="button" id="submit" value="Load">
-      </fieldset>
-    </form>
-  </div>
+    <div class="row">
+        <div class="column side left">
+            <input type="button" id="curr" value="Current Account">
+            <input type="button" id="disp" value="Display Current Accounts">
+            <input type="button" id="save" value="Savings Account">
+            <p id="curr_show"></p>
+            <p id="currency_error_message"></p>
+            <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+                <fieldset>
+                    <h3>Upload exchange rates</h3>
+                    <input type='file' id='fileinput'><br>
+                    <input type="button" id="submit" value="Load">
+                </fieldset>
+            </form>
+        </div>
+        <div class="column middle" id="myDIV">
+            <p id="currencyFromJSON"></p>
+            <label id="labelIdAccount" for="idAccount">Account ID:</label>
+            <input type="input" id="idAccount" placeholder="Enter your Account ID" required>
+            <p id="tipsAvailableAccounts"></p>
+            <input type="button" id="buttonIDAccount" value="Submit">
+            <p id="error_messages_on_main"></p>
+            <div id="accFormAfterCreation">
+                <p id="nameAccountOwner" class="fieldsCreatedAccount"></p>
+                <p id="AccountBalance" class="fieldsCreatedAccount"></p>
+                <p id="annualProfit" class="fieldsCreatedAccount"></p>
+                <p id="monthProfit" class="fieldsCreatedAccount"></p>
+                <p id="CreationDate" class="fieldsCreatedAccount"></p>
+                <p id="ClosureDate" class="fieldsCreatedAccount"></p>
+                <p id="accountHistory" class="fieldsCreatedAccount"></p>
+            </div>
+            <div id="test_col">
+                <h4>Creation of Current Account</h4>
+                <form id="form_login">
+                    <p id="percent">%</p>
+                    <div class="row_FullName">
+                        <div id="firstNameFields" style="float:left;margin-right:20px;">
+                            <label for="firstName">First name:</label>
+                            <input class="fields_name" type="text" id="firstName" required placeholder="Your name..">
+                        </div>
+                        <div id="lastNameFields" style="float:left;">
+                            <label for="lastName">Last name:</label>
+                            <input class="fields_name" type="text" id="lastName" required
+                                placeholder="Your last name..">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="balanceCurrency">
+                        <div id="balanceField" style="float:left;">
+                            <label for="Balance" class="balance_rate"> Account
+                                balance:</label>
+                            <input class="fields" type="text" id="Balance" required required
+                                placeholder="Fill in balance">
+                        </div>
+                        <div id="currencyChoice" style="float:left;">
+                            <p id="chooseCurrency"><select name="hero" class="fields" id="listOfCurrencies">
+                                    <option value="BYN" selected>BYN</option>
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                </select>
+                            </p>
+                        </div>
+                    </div>
+                    <div style="float:left; width: 50%;">
+                        <label for="RefRate" class="balance_rate"> Refinancing
+                            rate:</label>
+                        <input class=" fields" type="number" id="RefRate" value="8.75">
+                        <label for="accountHistory" class="balance_rate">Account history:</label>
+                        <textarea name="comment" id="textAreaAccountHistory" cols="73" rows="7"></textarea>
+                    </div>
 
-  <div id="right_menu">
-    <input type="button" id="IB" class="right_panel_btn" value="Internet Bancking">
-    <input type="button" id="dep" class="right_panel_btn" value="Deposits">
-    <input type="button" id="cred" class="right_panel_btn" value="Credits">
-  </div>
-  <div class="footer">
-    <p>Have any questions? Just drop us a line.
-      <a href="https://leverx.com/" id="button_contact">Contact</a>
-    </p>
-  </div>
+                    <input type="button" value="Create account" id="create_curr">
+                </form>
+            </div>
+        </div>
+        <div class="column side right">
+            <input type="button" id="IB" class="right_panel_btn" value="Internet Bancking">
+            <input type="button" id="dep" class="right_panel_btn" value="Deposits">
+            <input type="button" id="cred" class="right_panel_btn" value="Credits">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Have any questions? Just drop us a line.
+            <a href="https://leverx.com/" id="button_contact">Contact</a>
+        </p>
+    </div>
+
+    <script type="text/javascript" src="CurrAccount.json"></script>
+    <script src='main.js'></script>
+    <script src='load_change_rates.js'></script>
+    <script src='Accounts_definition.js'></script>
+    <script src='Accounts_handling.js'></script>
 </body>
-
-<script type="text/javascript" src="CurrAccount.json"></script>
-<script src='main.js'></script>
-<script src='load_change_rates.js'></script>
-<script src='Accounts_definition.js'></script>
-<script src='Accounts_handling.js'></script>
 
 </html>
